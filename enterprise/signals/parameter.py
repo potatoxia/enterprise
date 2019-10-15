@@ -222,6 +222,8 @@ def Uniform(pmin, pmax, size=None):
         _size = size
         _prior = Function(UniformPrior, pmin=pmin, pmax=pmax)
         _sampler = staticmethod(UniformSampler)
+        _pmin=pmin
+        _pmax=pmax
         _typename = _argrepr('Uniform', pmin=pmin, pmax=pmax)
 
     return Uniform
